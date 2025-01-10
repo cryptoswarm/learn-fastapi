@@ -11,6 +11,23 @@ async def hello_world():
     return {"message": "helle world!"}
 
 
+# fixed path first
+@app.get("/users/me")
+async def get_current_user():
+    """
+    Get current user
+    """
+    return {"user": "you"}
+
+
+@app.get("/users/{user_id}")
+async def get_user_by_id(user_id: int):
+    """
+    Get user by id
+    """
+    return {"user": user_id}
+
+
 @app.get("/items/{item_id}")
 async def items(item_id: int):
     """
