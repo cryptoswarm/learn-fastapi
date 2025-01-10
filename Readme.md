@@ -35,3 +35,45 @@ It provides production-ready code with automatic interactive documentation.
 It’s based on the open standards for APIs, OpenAPI and JSON Schema.
 
 The framework is designed to optimize your developer experience so that you can write simple code to build production-ready APIs with best practices by default.
+
+# Run application
+
+## Clone the repo
+
+```git
+git clone <repo url>
+```
+
+## Create a virtual environement
+
+1. Create
+
+```python
+python3.12 -m venv venv
+```
+
+2. Activate
+
+```python
+source venv/bin/active
+```
+
+3. Install dependencies
+
+- Install dependencies from `requirements.txt`
+
+```python
+pip install -r requirements
+```
+
+- Install the following 2 libraries:
+
+```python
+pip install fastapi uvicorn[standard]
+```
+
+## Run
+
+```python
+uvicorn main:app --reload
+```
